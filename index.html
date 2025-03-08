@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Toxicity Classifier</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo">
+                <i class="fa-solid fa-shield-halved"></i>
+                <h1>ToxiScan</h1>
+            </div>
+            <div class="header-actions">
+                <button id="logout-btn" class="logout-btn"onclick="window.open('login.html','_blank')" title="Log out">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </header>
+        <main class="app-main">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <div class="chat-title">
+                        <i class="fas fa-robot"></i>
+                        <span>AI Assistant</span>
+                    </div>
+                    <div class="header-controls">
+                        <button id="clear-chat" title="Clear conversation">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="chat-box" id="chat-box">
+                    <div class="message bot">
+                        Enter any text and this chatbot will detect if there are any foul language.
+                    </div>
+                </div>
+                
+                <div class="chat-input-container">
+                    <div class="input-wrapper">
+                        <textarea id="user-input" placeholder="Type a message to analyze..." rows="1"></textarea>
+                        <button id="sendbtn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <div class="input-info">Press Enter to send, Shift+Enter for new line</div>
+                </div>
+            </div>
+            
+            <div class="info-panel">
+                <div class="info-section">
+                    <h3>About ToxiScan</h3>
+                    <p>ToxiScan uses advanced AI to detect potentially toxic, harmful, or inappropriate content in text. This tool helps identify hate speech, threats, insults, and other problematic language.</p>
+                </div>
+                
+                <div class="info-section">
+                    <h3>How It Works</h3>
+                    <p>Type any text in the input box and our AI will analyze it for toxicity. The system provides a simple determination: either "Toxic" or "Not Toxic".</p>
+                </div>
+                
+                <div class="info-section binary-result">
+                    <h3>Results Guide</h3>
+                    <div class="result-item">
+                        <div class="result-indicator safe">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <span>Not Toxic: Safe, appropriate content</span>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-indicator toxic">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <span>Toxic: Contains inappropriate language</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div> 
+    <script src="script.js"></script>
+</body>
+</html>
